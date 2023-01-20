@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD455CFC29759FF600EE7922 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD455CFB29759FF600EE7922 /* main.cpp */; };
+		FD58F073297847B000F048E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD455CFB29759FF600EE7922 /* main.cpp */; };
+		FD58F0972979EF9400F048E8 /* student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD455D052975A06000EE7922 /* student.cpp */; };
+		FD58F0982979EF9B00F048E8 /* roster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD455D022975A04300EE7922 /* roster.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		FD455CF829759FF600EE7922 /* C867 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C867; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD455CFB29759FF600EE7922 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FD455D022975A04300EE7922 /* roster.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = roster.cpp; sourceTree = "<group>"; };
+		FD455D052975A06000EE7922 /* student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = student.cpp; sourceTree = "<group>"; };
+		FD455D082975A06E00EE7922 /* degree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = degree.h; sourceTree = "<group>"; };
+		FD455D092975D26300EE7922 /* student.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = student.h; sourceTree = "<group>"; };
+		FD455D0A2975D26E00EE7922 /* roster.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = roster.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				FD455CFB29759FF600EE7922 /* main.cpp */,
+				FD455D022975A04300EE7922 /* roster.cpp */,
+				FD455D0A2975D26E00EE7922 /* roster.h */,
+				FD455D052975A06000EE7922 /* student.cpp */,
+				FD455D092975D26300EE7922 /* student.h */,
+				FD455D082975A06E00EE7922 /* degree.h */,
 			);
 			path = C867;
 			sourceTree = "<group>";
@@ -119,7 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD455CFC29759FF600EE7922 /* main.cpp in Sources */,
+				FD58F073297847B000F048E8 /* main.cpp in Sources */,
+				FD58F0982979EF9B00F048E8 /* roster.cpp in Sources */,
+				FD58F0972979EF9400F048E8 /* student.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +178,8 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -221,7 +236,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -241,6 +257,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6BTL57MS6F;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LLVM_LTO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +268,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6BTL57MS6F;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LLVM_LTO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
