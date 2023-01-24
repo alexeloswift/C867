@@ -14,9 +14,10 @@ using namespace std;
 
 class Student
 {
-public:
-//  MARK: - Variables
-
+  //  MARK: - Private Properties
+  
+private:
+  
   string studentID;
   string firstName;
   string lastName;
@@ -24,9 +25,11 @@ public:
   int age;
   int daysInCourse[3];
   DegreeProgram degreeProgram;
-
-// MARK: - Student Object Constructor
-
+  
+  // MARK: - Student Object Constructor
+  
+public:
+  
   /// Constructor
   /// - Parameters:
   ///   - studentID: The new student id
@@ -39,14 +42,14 @@ public:
   ///   - daysInCourse3: # of days
   ///   - degreeProgram: students degree program
   Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
-
-//  MARK: - Methods
-
+  
+  //  MARK: - Methods
+  
   /// This method prints student object data
   void print();
-
-//  Getters
-
+  
+  //  Getters
+  
   /// This method returns the student id
   string getStudentID();
   /// this method returns the student first name
@@ -57,13 +60,13 @@ public:
   string getEmailAddress();
   /// This method returns the student age
   int getAge();
-  /// This method returns an array of days in course
+  /// This method returns a pointer to the array of days in course
   int *getDaysInCourse();
-  /// This method return s the student degree program
+  /// This method returns the students degree program
   DegreeProgram getDegreeProgram();
   
-// Setters
-
+  // Setters
+  
   /// This method allows us to modify an existing student object id
   /// - Parameter studentID: The id to be modified
   void setStudentID(string studentID);

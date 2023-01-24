@@ -14,24 +14,27 @@
 using namespace std;
 
 class Roster {
+  
+  //  MARK: - Private Properties
 
 private:
-  Student** classRosterArray; // Array of pointers to Student objects
+
+  Student** classRosterArray; // Pointer to array of pointers to Student objects
   int lastIndex; // Last occupied index in classRosterArray
   int capacity; // Maximum size of classRosterArray
-
-public:
-
+  
   // MARK: - Roster Object Constructor & Destructor
 
+public:
+  
   /// Constructor
   Roster();
   /// Destructor
   ~Roster();
-
+  
   //  MARK: - Methods
-
-  /// Parse array of strings
+  
+  /// Parse array of student data strings
   /// - Parameter array: The array of data that will be parsed
   void parse(const string studentData[]);
   /// Add a student to the roster
@@ -59,11 +62,11 @@ public:
   /// Print the average number of days in a course for a specific student
   /// - Parameter studentID: the id of the student in question
   void printAverageDaysInCourse(string studentID);
-
+  
   //  Helper Methods
-
+  
   /// Get the student ID of a student
-  /// - Parameter index: specific index in the roster
+  /// - Parameter index: specific index in the roster array
   string getStudentIDAtIndex(int index);
 };
 
